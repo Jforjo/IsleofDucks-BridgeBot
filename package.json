@@ -1,0 +1,35 @@
+{
+	"name": "isle-of-ducks-bridge-bot",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"start": "node src/index.ts"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.29.0",
+		"@types/bun": "latest",
+		"@types/express": "^5.0.3",
+		"@types/node": "^24.0.3",
+		"eslint": "^9.29.0",
+		"typescript-eslint": "^8.34.1"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@zikeji/hypixel": "^4.1.12",
+		"canvas": "^3.1.1",
+		"discord.js": "^14.20.0",
+		"express": "^5.1.0",
+		"farming-weight": "^0.13.0",
+		"gifwrap": "^0.10.1",
+		"mineflayer": "file:./mineflayer",
+		"nanoid": "^5.1.5",
+		"prismarine-viewer": "^1.33.0",
+		"senitherweight": "^1.0.8",
+		"sharp": "^0.34.3",
+		"skyhelper-networth": "^2.7.5",
+		"socket.io": "^4.8.1",
+		"socket.io-client": "^4.8.1"
+	}
+}

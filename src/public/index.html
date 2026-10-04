@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge Bot Dashboard</title>
+    <script defer type="module" src="./client.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="viewer" id="viewerDuck">
+                <iframe src="http://176.31.182.223:3001" frameborder="0"></iframe>
+            </div>
+            <div class="tabContainer">
+                <div class="tabs">
+                    <button aria-controls="consoleDuck" class="tab active" id="consoleTabDuck">Console</button>
+                    <button aria-controls="chatDuck" class="tab" id="chatTabDuck">Chat</button>
+                </div>
+                <div class="display">
+                    <div class="active" id="consoleDuck">
+                        <div class="anchor"></div>
+                    </div>
+                    <div id="chatDuck">
+                        <div id="outputDuck">
+                            <div class="anchor"></div>
+                        </div>
+                        <input type="text" id="inputDuck">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="viewer" id="viewerDuckling">
+                <iframe src="http://176.31.182.223:3002" frameborder="0"></iframe>
+            </div>
+            <div class="tabContainer">
+                <div class="tabs">
+                    <button aria-controls="consoleDuckling" class="tab active" id="consoleTabDuckling">Console</button>
+                    <button aria-controls="chatDuckling" class="tab" id="chatTabDuckling">Chat</button>
+                </div>
+                <div class="display">
+                    <div class="active" id="consoleDuckling">
+                        <div class="anchor"></div>
+                    </div>
+                    <div id="chatDuckling">
+                        <div id="outputDuckling">
+                            <div class="anchor"></div>
+                        </div>
+                        <input type="text" id="inputDuckling">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="viewer" id="viewerDuckieprincess">
+                <iframe src="http://176.31.182.223:3002" frameborder="0"></iframe>
+            </div>
+            <div class="tabContainer">
+                <div class="tabs">
+                    <button aria-controls="consoleDuckieprincess" class="tab active" id="consoleTabDuckieprincess">Console</button>
+                    <button aria-controls="chatDuckieprincess" class="tab" id="chatTabDuckieprincess">Chat</button>
+                </div>
+                <div class="display">
+                    <div class="active" id="consoleDuckieprincess">
+                        <div class="anchor"></div>
+                    </div>
+                    <div id="chatDuckieprincess">
+                        <div id="outputDuckieprincess">
+                            <div class="anchor"></div>
+                        </div>
+                        <input type="text" id="inputDuckieprincess">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

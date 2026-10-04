@@ -1,0 +1,35 @@
+import { MessageFlags, ComponentType, type MessageCreateOptions, escapeMarkdown } from "discord.js";
+import type { BotEvent } from "../../../utils.ts";
+import { capataliseFirstLetter } from "../../../util/format.ts";
+
+export default {
+    id: "chat:cantFindPlayer",
+    once: false,
+    regex: /^Can't find a player by the name of '(\w{2,17})'$/,
+    run: async (bridge, bot, name: string) => {
+        const content = {
+            flags: MessageFlags.IsComponentsV2,
+            components: [
+                {
+                    type: ComponentType.Container,
+                    accent_color: 0xFB9B00,
+                    components: [
+                        {
+                            type: ComponentType.TextDisplay,
+                            content: `Could not find a player by the name of '${escapeMarkdown(name)}'!`
+                        },
+                        { type: ComponentType.Separator },
+                        {
+                            type: ComponentType.TextDisplay,
+                            content: `Isle of ${capataliseFirstLetter(bot.name)}s • <t:${Math.floor(Date.now() / 1000)}:F>`
+                        }
+                    ]
+                }
+            ]
+        } as MessageCreateOptions;
+        
+        // if (bridge.combined.officer === true) await bridge.combinedOfficerChannel?.send(content);
+        await bot.officerChannel?.send(content);
+        if (bridge.combined.officer) await bridge.combinedOfficerChannel?.send(content);
+    },
+} as BotEvent;

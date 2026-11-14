@@ -98,6 +98,16 @@ export default {
                 }
                 return;
             }
+            multipleMatches = [...messageContent.matchAll(/^mute (\w+) ([0-9]{1,2}[md])$/gm)];
+            if (multipleMatches && multipleMatches.length > 0) {
+                if (isCombined) return message.channel.send("You cannot use the mute command in combined channels.");
+                for (const match of multipleMatches) {
+                    const [_, name, time] = match;
+                    bridgeBot.chat(`/g mute ${name} ${time}`, bridge, `Failed to send guild mute command to ${capataliseFirstLetter(bridgeBot.name)}`, "discord");
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
+                return;
+            }
             matches = messageContent.match(/^invite (\w+)$/);
             if (matches) {
                 if (isCombined) return message.channel.send("You cannot use the invite command in combined channels.");

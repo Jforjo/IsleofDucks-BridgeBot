@@ -58,6 +58,12 @@ export default async function getHOTMData(
             glacite: profile.members[uuid]?.mining_core?.powder_glacite ?? 0
         },
         ability: profile.members[uuid]?.skill_tree?.selected_ability?.mining ?? "None",
-        nucleusRuns: profile.members[uuid]?.leveling?.completions?.NUCLEUS_RUNS ?? 0
+        nucleusRuns: Math.min(
+            profile.members[uuid]?.mining_core?.crystals?.jade_crystal?.total_placed ?? 0,
+            profile.members[uuid]?.mining_core?.crystals?.amber_crystal?.total_placed ?? 0,
+            profile.members[uuid]?.mining_core?.crystals?.amethyst_crystal?.total_placed ?? 0,
+            profile.members[uuid]?.mining_core?.crystals?.sapphire_crystal?.total_placed ?? 0,
+            profile.members[uuid]?.mining_core?.crystals?.topaz_crystal?.total_placed ?? 0,
+        )
     };
 }

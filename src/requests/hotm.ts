@@ -27,6 +27,7 @@ export default async function getHOTMData(
             glacite: number;
         };
         ability: string;
+        nucleusRuns: number;
     } | {
         success: false;
         message: string;
@@ -56,6 +57,7 @@ export default async function getHOTMData(
             gemstone: profile.members[uuid]?.mining_core?.powder_gemstone ?? 0,
             glacite: profile.members[uuid]?.mining_core?.powder_glacite ?? 0
         },
-        ability: profile.members[uuid]?.skill_tree?.selected_ability?.mining ?? "None"
+        ability: profile.members[uuid]?.skill_tree?.selected_ability?.mining ?? "None",
+        nucleusRuns: profile.members[uuid]?.leveling?.completions?.NUCLEUS_RUNS ?? 0
     };
 }

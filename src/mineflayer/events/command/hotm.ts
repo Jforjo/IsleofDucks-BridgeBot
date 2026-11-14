@@ -27,6 +27,6 @@ export default {
         if (!hotm.success) {
             return bot.chat(`${channel} ${hotm.message}`, bridge, "Failed to send HOTM error message", bot.name);
         }
-        bot.chat(`${channel} ${hotm.username}'s HOTM: HOTM ${hotm.HOTMLevel} | Powder: ${formatNumber(Math.floor(hotm.powder.mithril))}, ${formatNumber(Math.floor(hotm.powder.gemstone))}, ${formatNumber(Math.floor(hotm.powder.glacite))} | Ability: ${hotm.ability}`, bridge, "Failed to send HOTM message", bot.name);
+        bot.chat(`${channel} ${hotm.username}'s HOTM: HOTM ${hotm.HOTMLevel} | Powder: ${formatNumber(Math.floor(hotm.powder.mithril))}, ${formatNumber(Math.floor(hotm.powder.gemstone))}, ${formatNumber(Math.floor(hotm.powder.glacite))} | Ability: ${hotm.ability} | Nuc Runs: ${hotm.nucleusRuns}`, bridge, "Failed to send HOTM message", bot.name);
     }
 } as BotEvent;

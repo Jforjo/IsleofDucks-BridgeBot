@@ -16,7 +16,7 @@ export interface BotEvent {
     };
 }
 
-export type BotName = "duck" | "duckling" | "duckieprincess";
+export type BotName = "duck" | "duckling" | "hatchling";
 
 export function getDirname(): string {
     const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file

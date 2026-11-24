@@ -130,6 +130,40 @@ export default async function getCata(query: string): Promise<
             archer: number;
             tank: number;
         } | null;
+        bossColl: {
+            entrance: {
+                normal: number;
+                master: undefined;
+            };
+            bonzo: {
+                normal: number;
+                master: number;
+            };
+            scarf: {
+                normal: number;
+                master: number;
+            };
+            professor: {
+                normal: number;
+                master: number;
+            };
+            thorn: {
+                normal: number;
+                master: number;
+            };
+            livid: {
+                normal: number;
+                master: number;
+            };
+            sadan: {
+                normal: number;
+                master: number;
+            };
+            necron: {
+                normal: number;
+                master: number;
+            };
+        };
     } | {
         success: false;
         message: string;
@@ -187,5 +221,39 @@ export default async function getCata(query: string): Promise<
                 archer: number;
                 tank: number;
             } : null,
+        bossColl: {
+            entrance: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["0"] ?? 0,
+                master: undefined
+            },
+            bonzo: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["1"] ?? 0,
+                master: profile.members[uuid]?.dungeons?.dungeon_types?.master_catacombs?.tier_completions?.["1"] ?? 0
+            },
+            scarf: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["2"] ?? 0,
+                master: profile.members[uuid]?.dungeons?.dungeon_types?.master_catacombs?.tier_completions?.["2"] ?? 0
+            },
+            professor: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["3"] ?? 0,
+                master: profile.members[uuid]?.dungeons?.dungeon_types?.master_catacombs?.tier_completions?.["3"] ?? 0
+            },
+            thorn: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["4"] ?? 0,
+                master: profile.members[uuid]?.dungeons?.dungeon_types?.master_catacombs?.tier_completions?.["4"] ?? 0
+            },
+            livid: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["5"] ?? 0,
+                master: profile.members[uuid]?.dungeons?.dungeon_types?.master_catacombs?.tier_completions?.["5"] ?? 0
+            },
+            sadan: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["6"] ?? 0,
+                master: profile.members[uuid]?.dungeons?.dungeon_types?.master_catacombs?.tier_completions?.["6"] ?? 0
+            },
+            necron: {
+                normal: profile.members[uuid]?.dungeons?.dungeon_types?.catacombs?.tier_completions?.["7"] ?? 0,
+                master: profile.members[uuid]?.dungeons?.dungeon_types?.master_catacombs?.tier_completions?.["7"] ?? 0
+            }
+        }
     }
 }

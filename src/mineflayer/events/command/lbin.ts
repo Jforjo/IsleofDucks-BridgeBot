@@ -5,7 +5,7 @@ import type { BotEvent } from "../../../utils.ts";
 export default {
     id: "chat:commandLbin",
     once: false,
-        regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[lL][bB][iI][nN] (.*)$/,
+        regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[lL][bB][iI][nN] (.*)$/,
     run: async (
         bridge,
         bot,

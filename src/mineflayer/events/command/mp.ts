@@ -4,7 +4,7 @@ import getMagicPower from "../../../requests/mp.ts";
 export default {
     id: "chat:commandMP",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?(?:[mM][pP]|[aA][pP])(?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?(?:[mM][pP]|[aA][pP])(?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,

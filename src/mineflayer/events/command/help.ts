@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default {
     id: "chat:commandHelp",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[hH][eE][lL][pP](?: ([cC][oO][mM][mM][aA][nN][dD][sS]?))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[hH][eE][lL][pP](?: ([cC][oO][mM][mM][aA][nN][dD][sS]?))?$/,
     run: async (
         bridge,
         bot,

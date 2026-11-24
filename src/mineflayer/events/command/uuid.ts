@@ -4,7 +4,7 @@ import getUsernameOrUUID from "../../../requests/uuid.ts";
 export default {
     id: "chat:commandUUID",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[uU][uU][iI][dD](?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[uU][uU][iI][dD](?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,

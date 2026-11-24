@@ -5,7 +5,7 @@ import { getBestiaryKills } from "../../../requests/bestiary.ts";
 export default {
     id: "chat:commandBestiaryKills",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?(?:[kK][iI][lL][lL][sS]|[bB][eE][sS][tT][iI][aA][rR][yY]) ([ a-zA-Z0-9_]+)$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?(?:[kK][iI][lL][lL][sS]|[bB][eE][sS][tT][iI][aA][rR][yY]) ([ a-zA-Z0-9_]+)$/,
     run: async (
         bridge,
         bot,

@@ -5,7 +5,7 @@ import { capataliseFirstLetter } from "../../../util/format.ts";
 export default {
     id: "chat:commandStalk",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[sS][tT][aA][lL][kK](?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[sS][tT][aA][lL][kK](?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,

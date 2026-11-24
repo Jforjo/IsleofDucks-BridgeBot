@@ -4,7 +4,7 @@ import type { BotEvent } from "../../../utils.ts";
 export default {
     id: "chat:commandGuess",
     once: false,
-    regex: /^(Guild|Officer) > (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[gG](?:[uU][eE][sS][sS])? (.*)$/,
+    regex: /^(Guild|Officer) > (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[gG](?:[uU][eE][sS][sS])? (.*)$/,
     run: async (
         bridge,
         bot,

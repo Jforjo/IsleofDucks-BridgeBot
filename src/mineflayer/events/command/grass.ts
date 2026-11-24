@@ -5,7 +5,7 @@ import getPlayer from "../../../requests/player.ts";
 export default {
     id: "chat:commandGrass",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[gG][rR][aA][sS][sS](?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[gG][rR][aA][sS][sS](?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,

@@ -5,7 +5,7 @@ import { formatNumberWithCommas } from "../../../util/format.ts";
 export default {
     id: "chat:commandCole",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?(?:[cC][wW]|[cC][oO][lL][eE])(?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?(?:[cC][wW]|[cC][oO][lL][eE])(?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,

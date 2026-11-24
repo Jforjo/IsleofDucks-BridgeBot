@@ -4,7 +4,7 @@ import { capataliseFirstLetter, messageFilter } from "../../../util/format.ts";
 export default {
     id: "chat:commandWiki",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[wW][iI][kK][iI](?: (.*))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[wW][iI][kK][iI](?: (.*))?$/,
     run: async (
         bridge,
         bot,

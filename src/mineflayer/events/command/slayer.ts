@@ -5,7 +5,7 @@ import { formatNumber } from "../../../util/format.ts";
 export default {
     id: "chat:commandSlayer",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[sS][lL][aA][yY][eE][rR][sS]?(?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[sS][lL][aA][yY][eE][rR][sS]?(?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,

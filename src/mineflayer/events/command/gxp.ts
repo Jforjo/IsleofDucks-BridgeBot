@@ -4,7 +4,7 @@ import getWeeklyGxp from "../../../requests/weeklyGxp.ts";
 export default {
     id: "chat:commandGXP",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[gG][eE]?[xX][pP](?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[gG][eE]?[xX][pP](?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,

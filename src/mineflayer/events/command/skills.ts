@@ -5,7 +5,7 @@ import { formatNumber } from "../../../util/format.ts";
 export default {
     id: "chat:commandSkills",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[sS](?:[kK][iI][lL][lL][sS]?)?(?: ([ a-zA-Z0-9_]+))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[sS](?:[kK][iI][lL][lL][sS]?)?(?: ([ a-zA-Z0-9_]+))?$/,
     run: async (
         bridge,
         bot,

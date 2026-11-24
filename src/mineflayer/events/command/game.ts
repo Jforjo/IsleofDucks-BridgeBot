@@ -5,7 +5,7 @@ import { Scramble } from "../game/scramble.ts";
 export default {
     id: "chat:commandGame",
     once: false,
-    regex: /^(Guild|Officer) > (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[gG][aA][mM][eE](?: ([rR][eE][mM][iI][nN][dD](?:[eE][rR])?))?$/,
+    regex: /^(Guild|Officer) > (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[gG][aA][mM][eE](?: ([rR][eE][mM][iI][nN][dD](?:[eE][rR])?))?$/,
     run: async (
         bridge,
         bot,

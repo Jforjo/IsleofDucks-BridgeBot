@@ -5,7 +5,7 @@ import { formatNumber, formatNumberWithCommas } from "../../../util/format.ts";
 export default {
     id: "chat:commandPurse",
     once: false,
-    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17}).*?): )?!?[pP][uU][rR][sS][eE](?: (\w{2,17}))?$/,
+    regex: /^(Guild >|Officer >|From) (\[(?:VIP|VIP\+|MVP|MVP\+|MVP\+\+)])? ?(\w{2,17})(?: (\[.{1,15}]))?: (?:(?:✧?(˚?\w{2,17})(?: [^ ]* ?[^ ]*)?): )?!?[pP][uU][rR][sS][eE](?: (\w{2,17}))?$/,
     run: async (
         bridge,
         bot,
